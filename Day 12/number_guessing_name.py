@@ -2,7 +2,7 @@
 import random
 
 # Variables
-
+number = random.randint(1, 100)
 # Functions
 def select_difficulty():
     difficulty = input("Choose a difficulty level. Type 'easy' or 'hard': ")
@@ -19,7 +19,7 @@ def select_difficulty():
 # Main
 print("Welcome to the Number Guessing Game!")
 print("I'm thinking of a number between 1 and 100.")
-number = random.randint(1, 100)
+
 guesses = select_difficulty()
 for i in range(guesses):
     print(f"You have {guesses} attempts remaining to guess the number.")
