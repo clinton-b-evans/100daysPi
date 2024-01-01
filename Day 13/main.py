@@ -45,7 +45,7 @@ while playing == True:
 
     os.system("clear")
     print(logo)
-    
+ 
     # Check if User is correct or not
     if is_correct:
         score += 1
