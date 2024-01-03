@@ -2,17 +2,27 @@ import turtle as t
 import colorgram
 import random
 
-t.colormode(255)
 
 # Variable creation
-leonardo = t.Turtle()
-leonardo.penup()
-leonardo.hideturtle()
-leonardo.speed(0)
-
+t.colormode(255)
 color_skip = 0
 rbg_colors = []
 colors = colorgram.extract('image.jpg', 30)
+
+# Turtle variables 
+leonardo = t.Turtle()
+leonardo.color("white")
+leonardo.hideturtle()
+leonardo.penup()
+leonardo.speed(0)
+num_of_dots = 100
+
+# Function creation
+def starting_position():
+    leonardo.setheading(225)
+    leonardo.forward(300)
+    leonardo.setheading(0)
+
 
 # Loop through the colors and add them to a list but skip first 5 colors
 for color in colors:
@@ -22,10 +32,9 @@ for color in colors:
         new_color = (color.rgb.r, color.rgb.g, color.rgb.b)
         rbg_colors.append(new_color)
 
-leonardo.setheading(225)
-leonardo.forward(300)
-leonardo.setheading(0)
-num_of_dots = 100
+
+starting_position()
+
 
 for dot_count in range(1, num_of_dots + 1):
     leonardo.dot(20, random.choice(rbg_colors))
@@ -37,4 +46,5 @@ for dot_count in range(1, num_of_dots + 1):
         leonardo.setheading(180)
         leonardo.forward(500)
         leonardo.setheading(0)
+
 t.exitonclick()
