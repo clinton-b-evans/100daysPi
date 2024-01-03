@@ -9,8 +9,9 @@ from random import randint
 raphael = Turtle()
 raphael.hideturtle()
 raphael.pensize(10)
+raphael.speed(9)
 directions = [0,90,180,270]
-while True:
+for _ in range(100):
     raphael.color(randint(0,255),
                   randint(0,255),
                   randint(0,255),)
