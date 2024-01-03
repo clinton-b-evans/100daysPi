@@ -17,4 +17,5 @@ for _ in range(3,11,1):
         raphael.forward(100)
         raphael.left(angle)
 
+
 screen.exitonclick()
