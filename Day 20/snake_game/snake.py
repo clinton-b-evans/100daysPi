@@ -21,5 +21,21 @@ class Snake():
             new_x = self.segments[seg_num - 1].xcor()
             new_y = self.segments[seg_num - 1].ycor()
             self.segments[seg_num].goto(new_x, new_y)
-
+        
         self.segments[0].forward(MOVE_DISTANCE)
+
+    def up(self):
+        '''Moves snake up by 20 pixels'''
+        self.segments[0].setheading(90)
+    def down(self):
+        '''Moves snake up by 20 pixels'''
+        self.segments[0].setheading(270)
+
+    def left(self):
+        '''Moves snake up by 20 pixels'''
+        self.segments[0].setheading(180)
+
+    def right(self):
+        '''Moves snake up by 20 pixels'''
+        self.segments[0].setheading(0)
+        
