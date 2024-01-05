@@ -30,5 +30,5 @@ while game_is_on:
     # Snake eats food / collision condition.
     if snake.head.distance(food) < 15:
         food.refresh()
-        scoreboard.update()
+        scoreboard.increase_score()
 screen.exitonclick()
