@@ -20,6 +20,12 @@ class Snake():
             new_segment.penup()
             new_segment.goto(position)
             self.segments.append(new_segment)
+    
+    def extend(self):
+        new_segment = Turtle(shape="square")
+        new_segment.color("white")
+        new_segment.penup()
+        self.segments.append(new_segment)
 
     def move(self):
         '''Moves snake forward by 20 pixels, starting from the tail'''
