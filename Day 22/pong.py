@@ -6,17 +6,17 @@ screen = Screen()
 screen.setup(width=800, height=600)
 screen.bgcolor("black")
 screen.title("Pong")
-player1 = Paddle((290,0))
-player2 = Paddle((-290,0))
+right_paddle = Paddle((290,0))
+left_paddle = Paddle((-290,0))
 screen.tracer(0) # Turns off animation.
 game_is_on = True
 
 
 screen.listen()
-screen.onkey(player1.go_up, "Up")
-screen.onkey(player1.go_down, "Down")
-screen.onkey(player2.go_up, "w")
-screen.onkey(player2.go_down, "s")
+screen.onkey(right_paddle.go_up, "Up")
+screen.onkey(right_paddle.go_down, "Down")
+screen.onkey(left_paddle.go_up, "w")
+screen.onkey(left_paddle.go_down, "s")
 
 # Main game loop
 while game_is_on:
