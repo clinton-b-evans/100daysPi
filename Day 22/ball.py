@@ -16,8 +16,10 @@ class Ball(Turtle):
         new_y = self.ycor()
         self.goto(new_x + self.x_move, new_y + self.y_move)
     
-    def bounce(self, xy_position):
-        if xy_position == "y":
-            self.y_move *= -1
-        elif xy_position == "x":
-            self.x_move *= -1
+    def bounce(self):
+        self.y_move *= -1
+
+    def score(self):
+        self.goto(0,0)
+        self.bounce()
+        self.x_move *= -1
