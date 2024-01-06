@@ -1,38 +1,24 @@
 from turtle import Screen, Turtle
+from paddle import Paddle
 import time
 
 screen = Screen()
 screen.setup(width=800, height=600)
 screen.bgcolor("black")
 screen.title("Pong")
+player1 = Paddle((290,0))
+player2 = Paddle((-290,0))
 screen.tracer(0) # Turns off animation.
 game_is_on = True
 
-# Create and move paddle before moving to pong.py file
-paddle = Turtle()
-paddle.shape("square")
-paddle.color("white")
-paddle.penup()
-paddle.shapesize(stretch_wid=5, stretch_len=1)
-paddle.goto(350, 0)
-screen.update() # Refreshes screen after moving paddle.
 
-
-def go_up():
-    new_y = paddle.ycor() + 20
-    paddle.goto(paddle.xcor(), new_y)
-    screen.update() # Refreshes the screen after each movement.
-
-
-def go_down():
-    new_y = paddle.ycor() - 20
-    paddle.goto(paddle.xcor(), new_y)
-    screen.update()
+screen.listen()
+screen.onkey(player1.go_up, "Up")
+screen.onkey(player1.go_down, "Down")
+screen.onkey(player2.go_up, "w")
+screen.onkey(player2.go_down, "s")
 
 # Main game loop
 while game_is_on:
-    screen.listen()
-    screen.onkey(go_up, "Up")
-    screen.onkey(go_down, "Down")
-
-    screen.exitonclick()
+    screen.update()
+screen.exitonclick()
