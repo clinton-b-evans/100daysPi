@@ -23,7 +23,7 @@ temperature_list = data["temp"].to_list()
 
 # print(data[data.temp == data["temp"].max()])
 
-# monday = data[data.day == "Monday"]
+monday = data[data.day == "Monday"]
 # fahrenheit_temp = (monday.temp * 9/5) + 32
 # print(fahrenheit_temp)
 
