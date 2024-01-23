@@ -5,5 +5,7 @@
     "currentposition",
     "exitonclick",
     "frogger"
-  ]
+  ],
+  "python.languageServer": "Pylance",
+  "editor.defaultFormatter": "GitHub.copilot"
 }
